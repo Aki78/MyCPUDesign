@@ -76,86 +76,28 @@
       <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="222" y="244">4b</text>
       <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="221" y="295">4b</text>
       <circ-anchor facing="east" x="270" y="270"/>
+      <circ-port dir="in" pin="120,120" x="250" y="290"/>
       <circ-port dir="in" pin="120,60" x="210" y="240"/>
-      <circ-port dir="in" pin="190,720" x="250" y="290"/>
-      <circ-port dir="in" pin="550,640" x="210" y="300"/>
-      <circ-port dir="out" pin="810,90" x="250" y="250"/>
-      <circ-port dir="out" pin="930,370" x="270" y="270"/>
+      <circ-port dir="out" pin="460,90" x="210" y="250"/>
     </appear>
+    <comp lib="0" loc="(120,120)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="width" val="4"/>
+    </comp>
     <comp lib="0" loc="(120,60)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="width" val="4"/>
     </comp>
-    <comp lib="0" loc="(150,60)" name="Splitter">
-      <a name="facing" val="south"/>
-      <a name="fanout" val="4"/>
-      <a name="incoming" val="4"/>
-    </comp>
-    <comp lib="0" loc="(190,720)" name="Pin">
+    <comp lib="0" loc="(460,90)" name="Pin">
       <a name="appearance" val="classic"/>
-      <a name="width" val="4"/>
-    </comp>
-    <comp lib="0" loc="(240,720)" name="Splitter">
-      <a name="facing" val="south"/>
-      <a name="fanout" val="4"/>
-      <a name="incoming" val="4"/>
-    </comp>
-    <comp lib="0" loc="(550,640)" name="Pin">
-      <a name="appearance" val="classic"/>
-      <a name="facing" val="north"/>
-    </comp>
-    <comp lib="0" loc="(810,90)" name="Pin">
-      <a name="appearance" val="classic"/>
-      <a name="facing" val="south"/>
-      <a name="output" val="true"/>
-    </comp>
-    <comp lib="0" loc="(930,370)" name="Pin">
-      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="width" val="4"/>
     </comp>
-    <comp lib="0" loc="(960,370)" name="Splitter">
-      <a name="facing" val="south"/>
-      <a name="fanout" val="4"/>
-      <a name="incoming" val="4"/>
-    </comp>
-    <comp loc="(570,150)" name="FullAdder"/>
-    <comp loc="(570,300)" name="FullAdder"/>
-    <comp loc="(570,430)" name="FullAdder"/>
-    <comp loc="(570,570)" name="FullAdder"/>
-    <wire from="(1000,390)" to="(1000,570)"/>
-    <wire from="(120,60)" to="(150,60)"/>
-    <wire from="(160,120)" to="(510,120)"/>
-    <wire from="(160,80)" to="(160,120)"/>
-    <wire from="(170,270)" to="(510,270)"/>
-    <wire from="(170,80)" to="(170,270)"/>
-    <wire from="(180,400)" to="(510,400)"/>
-    <wire from="(180,80)" to="(180,400)"/>
-    <wire from="(190,540)" to="(510,540)"/>
-    <wire from="(190,720)" to="(240,720)"/>
-    <wire from="(190,80)" to="(190,540)"/>
-    <wire from="(250,180)" to="(250,740)"/>
-    <wire from="(250,180)" to="(510,180)"/>
-    <wire from="(260,330)" to="(260,740)"/>
-    <wire from="(260,330)" to="(510,330)"/>
-    <wire from="(270,460)" to="(270,740)"/>
-    <wire from="(270,460)" to="(510,460)"/>
-    <wire from="(280,600)" to="(280,740)"/>
-    <wire from="(280,600)" to="(510,600)"/>
-    <wire from="(550,170)" to="(550,280)"/>
-    <wire from="(550,320)" to="(550,410)"/>
-    <wire from="(550,450)" to="(550,550)"/>
-    <wire from="(550,590)" to="(550,640)"/>
-    <wire from="(550,90)" to="(550,130)"/>
-    <wire from="(550,90)" to="(810,90)"/>
-    <wire from="(570,150)" to="(970,150)"/>
-    <wire from="(570,300)" to="(980,300)"/>
-    <wire from="(570,430)" to="(990,430)"/>
-    <wire from="(570,570)" to="(1000,570)"/>
-    <wire from="(930,370)" to="(960,370)"/>
-    <wire from="(970,150)" to="(970,390)"/>
-    <wire from="(980,300)" to="(980,390)"/>
-    <wire from="(990,390)" to="(990,430)"/>
+    <comp loc="(260,90)" name="Adder4b"/>
+    <wire from="(120,120)" to="(200,120)"/>
+    <wire from="(120,60)" to="(200,60)"/>
+    <wire from="(260,90)" to="(460,90)"/>
   </circuit>
   <circuit name="HalfAdder">
     <a name="appearance" val="logisim_evolution"/>
@@ -253,21 +195,22 @@
     <wire from="(970,460)" to="(1030,460)"/>
   </circuit>
   <circuit name="Adder4b">
+    <a name="appearance" val="custom"/>
     <a name="circuit" val="Adder4b"/>
     <a name="simulationFrequency" val="1.0"/>
     <appear>
-      <polygon fill="none" points="272,259 211,229 211,251 242,269 211,289 211,310 271,280" stroke="#000000"/>
-      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="261" y="269">+</text>
-      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="249" y="280">ci</text>
-      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="222" y="244">4b</text>
-      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="221" y="295">4b</text>
-      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="249" y="259">co</text>
-      <circ-anchor facing="east" x="270" y="270"/>
-      <circ-port dir="in" pin="120,60" x="210" y="240"/>
-      <circ-port dir="in" pin="190,720" x="250" y="290"/>
-      <circ-port dir="in" pin="550,640" x="210" y="300"/>
-      <circ-port dir="out" pin="810,90" x="270" y="270"/>
-      <circ-port dir="out" pin="930,370" x="250" y="250"/>
+      <polygon fill="none" points="132,59 71,29 71,51 102,69 71,89 71,110 131,80" stroke="#000000"/>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="121" y="69">+</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="109" y="80">ci</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="82" y="44">4b</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="81" y="95">4b</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="110" y="58">co</text>
+      <circ-anchor facing="east" x="130" y="70"/>
+      <circ-port dir="in" pin="120,60" x="70" y="40"/>
+      <circ-port dir="in" pin="190,720" x="70" y="100"/>
+      <circ-port dir="in" pin="550,640" x="110" y="90"/>
+      <circ-port dir="out" pin="810,90" x="110" y="50"/>
+      <circ-port dir="out" pin="930,370" x="130" y="70"/>
     </appear>
     <comp lib="0" loc="(120,60)" name="Pin">
       <a name="appearance" val="classic"/>
